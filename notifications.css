@@ -1,0 +1,70 @@
+.notification {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  
+  display: flex;
+
+  align-items: center;
+
+  /* width: 605px;
+  height: 70px; */
+
+  max-width: 75vw;
+
+  color: #f1f1f1;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 30px;
+
+  padding: 20px;
+
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+
+  transition: top 0.7s;
+
+  animation: 2s cubic-bezier(.4,.37,.37,1.16) slideIn,
+    1.5s 10s forwards slideOut;
+}
+
+.red {
+  background: #e32e61;
+}
+.yellow {
+  background: #f3ab29;
+}
+.green {
+  background: #4BB543;
+}
+
+.notif_icon {
+  margin-right: 10px;
+}
+
+.notif_texte {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@keyframes slideIn {
+  from {
+    right: -100%;
+  }
+
+  to {
+    right: 20px;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    right: 20px;
+  }
+
+  to {
+    right: -115%;
+  }
+}
