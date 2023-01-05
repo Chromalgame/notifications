@@ -1,8 +1,21 @@
 btn = document.querySelector(".click")
 posTop = "20px";
+function randomIntFromInterval(min, max) { // min and max included 
+  return Math.floor(Math.random() * (max - min + 1) + min)
+}
 
 btn.addEventListener('click', () => {
-    notification("yellow", "info.svg", "Erreur : Nom d'utilisateur ou mot de passe incorrect")
+    switch (randomIntFromInterval(1, 3)) {
+        case 1:
+            notification("red", "cancel.svg", "Erreur : Une erreur à eu lieu")
+        break;
+        case 2:
+            notification("yellow", "info.svg", "Attention : Ceci est un avertissement")
+        break;
+        case 3:
+            notification("green", "check.svg", "Valide : Tout est OK")
+        break;
+    }
 })
 
 function notification(color, logo, message){
