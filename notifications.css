@@ -68,3 +68,18 @@
     right: -115%;
   }
 }
+
+.click{
+  width: 100px;
+  height: 100px;
+  color: #F1F1F1;
+  background-color: #333;
+  border: none;
+
+  position: absolute;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  
+  transform: translate(-50%,-40%);
+}
